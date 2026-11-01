@@ -190,7 +190,7 @@ class LoginActivity : AccountAuthenticatorActivity() {
                 progressDialog!!.dismiss()
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Timber.e(e, "Could not dismiss login progress dialog")
         }
         with(binding!!) {
             loginUsername.removeTextChangedListener(textWatcher)
